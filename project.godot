@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="bird-game-jam-2025-botucatu"
+run/main_scene="uid://dwx81fexuqpjk"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[audio]
+
+driver/enable_input=true
 
 [rendering]
 

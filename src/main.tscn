@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwx81fexuqpjk"]
+
+[ext_resource type="PackedScene" uid="uid://dvjlkpjvjxn0h" path="res://src/record_demo/MicRecord.tscn" id="1_eewff"]
+
+[node name="Main" type="Node2D"]
+
+[node name="MicRecord" parent="." instance=ExtResource("1_eewff")]
+anchors_preset = -1
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 292.0
+offset_top = 111.0
+offset_right = 866.0
+offset_bottom = 561.0
