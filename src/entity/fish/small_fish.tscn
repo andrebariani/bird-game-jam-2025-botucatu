@@ -14,9 +14,12 @@ data = ExtResource("2_6ouhj")
 position = Vector2(0, 3.57628e-07)
 scale = Vector2(0.171875, 0.0625)
 
-[node name="state" parent="." index="2"]
-visible = false
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_6ouhj")
+
+[node name="VisionBox" parent="." index="3"]
+collision_layer = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="VisionBox" index="0"]
+polygon = PackedVector2Array(11, 0, 47, -18, 55, 0, 47, 18)

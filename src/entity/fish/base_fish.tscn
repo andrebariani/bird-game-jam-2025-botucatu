@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dm3w76dl2syt8"]
+[gd_scene load_steps=9 format=3 uid="uid://dm3w76dl2syt8"]
 
 [ext_resource type="Script" uid="uid://cklfhy8nl1rxr" path="res://src/state_machine/state_machine.gd" id="1_ema3f"]
 [ext_resource type="Script" uid="uid://c8mfsoyyy0exa" path="res://src/entity/fish/base_fish.gd" id="1_vshls"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bdagmyn231jc4" path="res://icon.svg" id="4_6xxoh"]
 [ext_resource type="Script" uid="uid://bvq4wabc8t4ln" path="res://src/entity/fish/roam.gd" id="5_0c2h1"]
 [ext_resource type="Script" uid="uid://c3q3glngcslci" path="res://src/entity/fish/leave.gd" id="6_3hvh6"]
+[ext_resource type="Script" uid="uid://b7v35aj23skl6" path="res://src/entity/fish/escape.gd" id="8_3hvh6"]
 
 [node name="BaseFish" type="CharacterBody2D"]
 collision_layer = 2
@@ -36,3 +37,14 @@ one_shot = true
 
 [node name="Leave" type="Node" parent="States"]
 script = ExtResource("6_3hvh6")
+
+[node name="Escape" type="Node" parent="States"]
+script = ExtResource("8_3hvh6")
+
+[node name="VisionBox" type="Area2D" parent="."]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[connection signal="body_entered" from="VisionBox" to="." method="_on_vision_box_body_entered"]

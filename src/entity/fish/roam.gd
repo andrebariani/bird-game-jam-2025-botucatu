@@ -22,5 +22,7 @@ func run(delta):
 
 func before_end(_next):
 	var e: BaseFish = entity
-	timer.stop()
-	e.choose_flip()
+	
+	if not e.detected:
+		timer.stop()
+		e.choose_flip()

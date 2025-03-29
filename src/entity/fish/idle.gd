@@ -29,3 +29,5 @@ func before_end(_next):
 	
 	if not e.just_spawned:
 		e.choose_flip()
+	if not e.detected:
+		e.choose_flip()
