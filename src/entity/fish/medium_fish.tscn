@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://g1s8rkhck87w"]
+
+[ext_resource type="PackedScene" uid="uid://dm3w76dl2syt8" path="res://src/entity/fish/base_fish.tscn" id="1_3rx08"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3rx08"]
+radius = 7.0
+height = 46.0
+
+[node name="MediumFish" instance=ExtResource("1_3rx08")]
+
+[node name="sprite" parent="." index="0"]
+position = Vector2(0, -4.76837e-07)
+scale = Vector2(0.34375, 0.109375)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="3"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_3rx08")

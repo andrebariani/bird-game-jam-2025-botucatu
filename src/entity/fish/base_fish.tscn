@@ -1,0 +1,38 @@
+[gd_scene load_steps=8 format=3 uid="uid://dm3w76dl2syt8"]
+
+[ext_resource type="Script" uid="uid://cklfhy8nl1rxr" path="res://src/state_machine/state_machine.gd" id="1_ema3f"]
+[ext_resource type="Script" uid="uid://c8mfsoyyy0exa" path="res://src/entity/fish/base_fish.gd" id="1_vshls"]
+[ext_resource type="Resource" uid="uid://dqot55ojvgirb" path="res://src/entity/fish/data/cascudo.tres" id="2_e7jep"]
+[ext_resource type="Script" uid="uid://bbjnwjlyhdrpw" path="res://src/entity/fish/idle.gd" id="3_hwe2k"]
+[ext_resource type="Texture2D" uid="uid://bdagmyn231jc4" path="res://icon.svg" id="4_6xxoh"]
+[ext_resource type="Script" uid="uid://bvq4wabc8t4ln" path="res://src/entity/fish/roam.gd" id="5_0c2h1"]
+[ext_resource type="Script" uid="uid://c3q3glngcslci" path="res://src/entity/fish/leave.gd" id="6_3hvh6"]
+
+[node name="BaseFish" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_vshls")
+data = ExtResource("2_e7jep")
+
+[node name="sprite" type="Sprite2D" parent="."]
+position = Vector2(-2.38419e-07, -9.53674e-07)
+scale = Vector2(0.578125, 0.265625)
+texture = ExtResource("4_6xxoh")
+
+[node name="States" type="Node" parent="."]
+script = ExtResource("1_ema3f")
+
+[node name="Idle" type="Node" parent="States"]
+script = ExtResource("3_hwe2k")
+
+[node name="Timer" type="Timer" parent="States/Idle"]
+one_shot = true
+
+[node name="Roam" type="Node" parent="States"]
+script = ExtResource("5_0c2h1")
+
+[node name="Timer" type="Timer" parent="States/Roam"]
+one_shot = true
+
+[node name="Leave" type="Node" parent="States"]
+script = ExtResource("6_3hvh6")

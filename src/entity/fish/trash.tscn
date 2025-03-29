@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2shgnfrfva0g"]
+
+[ext_resource type="PackedScene" uid="uid://dm3w76dl2syt8" path="res://src/entity/fish/base_fish.tscn" id="1_0oi2s"]
+[ext_resource type="Resource" uid="uid://dl3kru07a6xoj" path="res://src/entity/fish/data/lixo.tres" id="2_na3ip"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0oi2s"]
+height = 48.0
+
+[node name="Trash" instance=ExtResource("1_0oi2s")]
+data = ExtResource("2_na3ip")
+
+[node name="sprite" parent="." index="0"]
+modulate = Color(0, 1, 0, 1)
+position = Vector2(-9.53674e-07, -2.38419e-07)
+scale = Vector2(0.359375, 0.140625)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_0oi2s")

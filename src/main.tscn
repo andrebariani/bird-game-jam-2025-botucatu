@@ -1,16 +1,59 @@
-[gd_scene load_steps=2 format=3 uid="uid://dwx81fexuqpjk"]
+[gd_scene load_steps=6 format=3 uid="uid://dwx81fexuqpjk"]
 
-[ext_resource type="PackedScene" uid="uid://dvjlkpjvjxn0h" path="res://src/record_demo/MicRecord.tscn" id="1_eewff"]
+[ext_resource type="Script" uid="uid://duhbbdujtogiw" path="res://src/main.gd" id="1_3cfgd"]
+[ext_resource type="PackedScene" uid="uid://rpamk5xp506" path="res://src/player/bigua.tscn" id="1_eewff"]
+[ext_resource type="PackedScene" uid="uid://bh2esqexrici8" path="res://src/entity/spawner/fish_spawner.tscn" id="3_5q4o7"]
+[ext_resource type="Script" uid="uid://bn6lmiyan7ie3" path="res://src/main_ui.gd" id="4_fyndt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3cfgd"]
+size = Vector2(20, 444)
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_3cfgd")
 
-[node name="MicRecord" parent="." instance=ExtResource("1_eewff")]
-anchors_preset = -1
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 292.0
-offset_top = 111.0
-offset_right = 866.0
-offset_bottom = 561.0
+[node name="bigua" parent="." instance=ExtResource("1_eewff")]
+position = Vector2(176, 65)
+
+[node name="FishSpawner" parent="." instance=ExtResource("3_5q4o7")]
+
+[node name="MainUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("4_fyndt")
+
+[node name="energy" type="Label" parent="MainUI"]
+layout_mode = 0
+offset_right = 65.0
+offset_bottom = 23.0
+
+[node name="Walls" type="Node2D" parent="."]
+
+[node name="WallLeft" type="StaticBody2D" parent="Walls"]
+collision_layer = 4
+collision_mask = 0
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/WallLeft"]
+position = Vector2(-11, 98)
+shape = SubResource("RectangleShape2D_3cfgd")
+
+[node name="WallBottom" type="StaticBody2D" parent="Walls"]
+collision_layer = 4
+collision_mask = 0
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/WallBottom"]
+position = Vector2(197, 234)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_3cfgd")
+
+[node name="WallRight" type="StaticBody2D" parent="Walls"]
+collision_layer = 4
+collision_mask = 0
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/WallRight"]
+position = Vector2(411, 103)
+shape = SubResource("RectangleShape2D_3cfgd")

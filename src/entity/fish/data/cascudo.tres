@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=2 format=3 uid="uid://dqot55ojvgirb"]
+
+[ext_resource type="Script" uid="uid://drybxa7mfy30" path="res://src/entity/fish/data/fish_data.gd" id="1_jc5dx"]
+
+[resource]
+script = ExtResource("1_jc5dx")
+id = &"cascudo"
+name = "Cascudo"
+description = ""
+stamina = 1000.0
+size_class = "Medium"
+size_centimeters = 0.0
+metadata/_custom_type_script = "uid://drybxa7mfy30"

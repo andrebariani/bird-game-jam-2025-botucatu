@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://dm3w76dl2syt8"]
+
+[ext_resource type="Script" uid="uid://cklfhy8nl1rxr" path="res://src/state_machine/state_machine.gd" id="1_ema3f"]
+[ext_resource type="Script" uid="uid://c8mfsoyyy0exa" path="res://src/entity/fish/base_fish.gd" id="1_vshls"]
+[ext_resource type="Script" uid="uid://citnb3jb2nda3" path="res://src/entity/fish/move.gd" id="2_vshls"]
+[ext_resource type="Script" uid="uid://bbjnwjlyhdrpw" path="res://src/entity/fish/idle.gd" id="3_hwe2k"]
+[ext_resource type="Texture2D" uid="uid://bdagmyn231jc4" path="res://icon.svg" id="4_6xxoh"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f48qf"]
+radius = 8.0
+height = 58.0
+
+[node name="BaseFish" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_vshls")
+
+[node name="sprite" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_f48qf")
+
+[node name="States" type="Node" parent="."]
+script = ExtResource("1_ema3f")
+
+[node name="Idle" type="Node" parent="States"]
+script = ExtResource("3_hwe2k")
+
+[node name="Move" type="Node" parent="States"]
+script = ExtResource("2_vshls")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(0.500001, 0)
+scale = Vector2(0.414063, 0.117187)
+texture = ExtResource("4_6xxoh")

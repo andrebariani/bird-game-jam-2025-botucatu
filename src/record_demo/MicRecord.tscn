@@ -60,6 +60,7 @@ disabled = true
 text = "Play"
 
 [node name="PlayMusic" type="Button" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 30.0
 offset_top = 395.0
@@ -68,6 +69,7 @@ offset_bottom = 435.0
 text = "Play Music"
 
 [node name="FormatLabel" type="Label" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 33.0
 offset_top = 153.0
@@ -76,6 +78,7 @@ offset_bottom = 179.0
 text = "Format:"
 
 [node name="FormatOptionButton" type="OptionButton" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 131.0
 offset_top = 150.0
@@ -91,6 +94,7 @@ popup/item_2/text = "IMA ADPCM Compression"
 popup/item_2/id = 2
 
 [node name="MixRateLabel" type="Label" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 33.0
 offset_top = 192.0
@@ -99,6 +103,7 @@ offset_bottom = 218.0
 text = "Mix rate:"
 
 [node name="MixRateOptionButton" type="OptionButton" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 131.0
 offset_top = 189.0
@@ -120,6 +125,7 @@ popup/item_5/text = "48000 Hz"
 popup/item_5/id = 5
 
 [node name="StereoLabel" type="Label" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 33.0
 offset_top = 233.0
@@ -128,6 +134,7 @@ offset_bottom = 259.0
 text = "Stereo:"
 
 [node name="StereoCheckButton" type="CheckButton" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 126.0
 offset_top = 233.0
@@ -136,6 +143,7 @@ offset_bottom = 264.0
 button_pressed = true
 
 [node name="SaveButton" type="Button" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 29.0
 offset_top = 284.0
@@ -145,6 +153,7 @@ disabled = true
 text = "Save WAV To:"
 
 [node name="Filename" type="LineEdit" parent="SaveButton"]
+visible = false
 layout_mode = 0
 offset_left = 180.0
 offset_right = 507.0
@@ -153,6 +162,7 @@ text = "user://record.wav"
 caret_blink = true
 
 [node name="OpenUserFolderButton" type="Button" parent="."]
+visible = false
 layout_mode = 1
 offset_left = 209.0
 offset_top = 334.0

@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwx81fexuqpjk"]
+
+[ext_resource type="PackedScene" uid="uid://rpamk5xp506" path="res://src/player/bigua.tscn" id="1_eewff"]
+[ext_resource type="PackedScene" uid="uid://dm3w76dl2syt8" path="res://src/entity/fish/base_fish.tscn" id="2_gh0ne"]
+[ext_resource type="PackedScene" uid="uid://bh2esqexrici8" path="res://src/entity/spawner/fish_spawner.tscn" id="3_5q4o7"]
+
+[node name="Main" type="Node2D"]
+
+[node name="bigua" parent="." instance=ExtResource("1_eewff")]
+position = Vector2(176, 65)
+
+[node name="BaseFish" parent="." instance=ExtResource("2_gh0ne")]
+position = Vector2(119, 110)
+
+[node name="FishSpawner" parent="." instance=ExtResource("3_5q4o7")]

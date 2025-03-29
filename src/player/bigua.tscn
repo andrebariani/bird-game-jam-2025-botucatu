@@ -1,0 +1,91 @@
+[gd_scene load_steps=11 format=3 uid="uid://rpamk5xp506"]
+
+[ext_resource type="Script" uid="uid://cklfhy8nl1rxr" path="res://src/state_machine/state_machine.gd" id="1_vwxh6"]
+[ext_resource type="Script" uid="uid://v0nw33umid6y" path="res://src/player/bigua.gd" id="1_xdlp8"]
+[ext_resource type="Script" uid="uid://42c7wamb23tu" path="res://src/player/states/idle.gd" id="3_xrvsa"]
+[ext_resource type="Script" uid="uid://cnqj5bwqtabih" path="res://src/player/states/move.gd" id="4_5aio1"]
+[ext_resource type="Script" uid="uid://dsg71tn0ldhpm" path="res://src/player/states/dive.gd" id="5_875bn"]
+[ext_resource type="Script" uid="uid://dn1225p3c22l6" path="res://src/player/states/swim.gd" id="6_pt8x3"]
+[ext_resource type="Script" uid="uid://bscswg41pyi5b" path="res://src/player/states/stun.gd" id="7_gi46j"]
+[ext_resource type="Texture2D" uid="uid://bdagmyn231jc4" path="res://icon.svg" id="7_mjcs3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_riuvi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mjcs3"]
+size = Vector2(12, 9)
+
+[node name="bigua" type="CharacterBody2D"]
+collision_mask = 4
+script = ExtResource("1_xdlp8")
+ROTATION_SPEED = 0.1
+
+[node name="BreathTimer" type="Timer" parent="."]
+wait_time = 8.0
+one_shot = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_riuvi")
+
+[node name="States" type="Node" parent="."]
+script = ExtResource("1_vwxh6")
+
+[node name="Idle" type="Node" parent="States"]
+script = ExtResource("3_xrvsa")
+
+[node name="Move" type="Node" parent="States"]
+script = ExtResource("4_5aio1")
+
+[node name="Dive" type="Node" parent="States"]
+script = ExtResource("5_875bn")
+
+[node name="Swim" type="Node" parent="States"]
+script = ExtResource("6_pt8x3")
+
+[node name="Stun" type="Node" parent="States"]
+script = ExtResource("7_gi46j")
+
+[node name="Timer" type="Timer" parent="States/Stun"]
+wait_time = 0.5
+one_shot = true
+
+[node name="sprite_water" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("7_mjcs3")
+
+[node name="bico" type="Area2D" parent="sprite_water"]
+scale = Vector2(5, 5)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sprite_water/bico"]
+position = Vector2(18, 0.5)
+shape = SubResource("RectangleShape2D_mjcs3")
+
+[node name="Debug" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="state" type="Label" parent="Debug"]
+layout_mode = 0
+offset_top = 8.0
+offset_right = 40.0
+offset_bottom = 31.0
+text = "Idle"
+
+[node name="pos" type="Label" parent="Debug"]
+layout_mode = 0
+offset_top = 21.0
+offset_right = 40.0
+offset_bottom = 44.0
+text = "(0,0)"
+
+[node name="charge" type="Label" parent="Debug"]
+layout_mode = 0
+offset_top = 38.0
+offset_right = 40.0
+offset_bottom = 61.0
+text = "0"
+
+[connection signal="body_entered" from="sprite_water/bico" to="." method="_on_bico_body_entered"]

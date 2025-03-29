@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=2 format=3 uid="uid://bokh7mhnffxi5"]
+
+[ext_resource type="Script" uid="uid://drybxa7mfy30" path="res://src/entity/fish/data/fish_data.gd" id="1_p7x6w"]
+
+[resource]
+script = ExtResource("1_p7x6w")
+id = &"alevino"
+name = "Alevino"
+description = ""
+stamina = 500.0
+size_class = "Small"
+size_centimeters = 0.0
+metadata/_custom_type_script = "uid://drybxa7mfy30"
