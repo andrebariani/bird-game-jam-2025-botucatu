@@ -9,6 +9,7 @@ extends State
 
 func begin():
 	var e: PlayerBigua = entity
+	e.charge_power = 0
 	
 	e.consume_fishes()
 
@@ -36,6 +37,6 @@ func run(delta):
 		tween.tween_property(e, 'charge_power', e.CHARGE_MAX, e.CHARGE_LOAD_SECONDS) \
 			.set_ease(Tween.EASE_IN) \
 			.set_trans(Tween.TRANS_LINEAR)
-	if charge_just_released:
+	if charge_just_released or e.charge_power >= e.CHARGE_MAX:
 		tween.stop()
 		end("Dive")
