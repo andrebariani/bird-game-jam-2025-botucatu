@@ -4,15 +4,15 @@
 [ext_resource type="Resource" uid="uid://bokh7mhnffxi5" path="res://src/entity/fish/data/alevino.tres" id="2_6ouhj"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6ouhj"]
-radius = 4.0
-height = 22.0
+radius = 12.0
+height = 50.0
 
 [node name="SmallFish" instance=ExtResource("1_06s5u")]
 data = ExtResource("2_6ouhj")
 
 [node name="sprite" parent="." index="0"]
-position = Vector2(0, 3.57628e-07)
-scale = Vector2(0.171875, 0.0625)
+position = Vector2(2.38419e-06, 4.76837e-07)
+scale = Vector2(0.375, 0.1875)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
 rotation = 1.5708
@@ -22,4 +22,6 @@ shape = SubResource("CapsuleShape2D_6ouhj")
 collision_layer = 0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="VisionBox" index="0"]
+position = Vector2(-11.1209, 1.71661e-05)
+scale = Vector2(3.84341, 3.4375)
 polygon = PackedVector2Array(11, 0, 47, -18, 55, 0, 47, 18)

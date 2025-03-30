@@ -38,7 +38,7 @@ var inputs = {
 
 const CHARGE_MAX = 100
 const CHARGE_MIN = 10
-const CHARGE_LOAD_SECONDS = 2
+const CHARGE_LOAD_SECONDS = 1
 var charge_power = 0.0
 
 var water_top_pos_y = 0.0

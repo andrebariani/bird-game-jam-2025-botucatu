@@ -4,7 +4,6 @@ extends State
 @export var STEER_SPEED = 25.0
 @export var ROTATION_SPEED = 0.05
 @export var FRICTION = 150
-@export var ACCEL = 200
 
 @export var STAMINA_COST = 1000
 

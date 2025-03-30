@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://b2801xkshcanh" path="res://src/player/states/lose.gd" id="8_iua1b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_riuvi"]
+size = Vector2(53, 55)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mjcs3"]
 size = Vector2(12, 9)
@@ -18,7 +19,10 @@ size = Vector2(12, 9)
 [node name="bigua" type="CharacterBody2D"]
 collision_mask = 4
 script = ExtResource("1_xdlp8")
+SPEED = 250.0
 ROTATION_SPEED = 0.1
+FRICTION = 50
+ACCEL = 300
 stamina = 3000
 
 [node name="BreathTimer" type="Timer" parent="."]
@@ -40,9 +44,15 @@ one_shot = true
 
 [node name="Move" type="Node" parent="States"]
 script = ExtResource("4_5aio1")
+SPEED = 300.0
+FRICTION = 150
+ACCEL = 375
 
 [node name="Dive" type="Node" parent="States"]
 script = ExtResource("5_875bn")
+MAX_SPEED = 700.0
+STEER_SPEED = 75.0
+FRICTION = 250
 
 [node name="Swim" type="Node" parent="States"]
 script = ExtResource("6_pt8x3")
@@ -58,7 +68,7 @@ one_shot = true
 script = ExtResource("8_iua1b")
 
 [node name="sprite_water" type="Sprite2D" parent="."]
-scale = Vector2(0.2, 0.2)
+scale = Vector2(0.414063, 0.4375)
 texture = ExtResource("7_mjcs3")
 
 [node name="bico" type="Area2D" parent="sprite_water"]

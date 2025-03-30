@@ -10,9 +10,9 @@ extends Node2D
 ]
 
 @export var MAX_DISTANCE_LEFT = -100
-@export var MAX_DISTANCE_RIGHT = 500
-@export var SHALLOW_HEIGHT_RANGE = [100, 224] # [0, 100]
-@export var DEEP_HEIGHT_RANGE = [100, 224]
+@export var MAX_DISTANCE_RIGHT = 1124
+@export var SHALLOW_HEIGHT_RANGE = [300, 400] # [0, 100]
+@export var DEEP_HEIGHT_RANGE = [400, 550]
 
 @export var MAX_FISH_QUANTITY = 25
 
@@ -65,6 +65,7 @@ func spawn_fish(fish: BaseFish):
 	
 	var pos = Vector2.ZERO
 	
+	print_debug(fish.data.size_class)
 	match fish.data.size_class:
 		"Small":
 			pos = Vector2(MAX_DISTANCE_LEFT, randi_range( \
@@ -78,14 +79,12 @@ func spawn_fish(fish: BaseFish):
 			pos = Vector2(MAX_DISTANCE_LEFT, randi_range( \
 				SHALLOW_HEIGHT_RANGE[0], DEEP_HEIGHT_RANGE[1]) \
 			)
-		
+	
 	var dir = 1
 	
 	if randi_range(0, 1):
 		pos.x = MAX_DISTANCE_RIGHT
 		dir = -1
-	
-	pos.y = randi_range(SHALLOW_HEIGHT_RANGE[0], SHALLOW_HEIGHT_RANGE[1])
 
 	fish.init(dir)
 	fish.global_position = pos

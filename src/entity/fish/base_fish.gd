@@ -12,7 +12,7 @@ class_name BaseFish
 @export var FRICTION = 75
 
 @export var MAX_DISTANCE_LEFT = -100
-@export var MAX_DISTANCE_RIGHT = 500
+@export var MAX_DISTANCE_RIGHT = 1124
 
 
 var just_spawned = true
