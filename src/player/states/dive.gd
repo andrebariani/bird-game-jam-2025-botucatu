@@ -17,6 +17,11 @@ func begin():
 	var dive_power = (e.charge_power / 100.0) * MAX_SPEED
 	e.velocity = Vector2(0, dive_power)
 	e.sprite.rotation = deg_to_rad(90)
+	
+	if e.charge_power >= 40:
+		e.play_sfx("dive")
+	else:
+		e.play_sfx("dive_short")
 
 
 func run(delta):

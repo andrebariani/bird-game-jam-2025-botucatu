@@ -39,4 +39,5 @@ func run(delta):
 			.set_trans(Tween.TRANS_LINEAR)
 	if charge_just_released or e.charge_power >= e.CHARGE_MAX:
 		tween.stop()
+		AudioGlobal.switch_ambience()
 		end("Dive")

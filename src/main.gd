@@ -14,7 +14,7 @@ func _ready():
 func _on_game_start():
 	bigua.run = true
 	spawner.start()
-	
+
 func _input(event):
 	if event.is_action_pressed("ui_cancel"):
 		get_tree().reload_current_scene()

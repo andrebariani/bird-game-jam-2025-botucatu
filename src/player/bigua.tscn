@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://rpamk5xp506"]
+[gd_scene load_steps=15 format=3 uid="uid://rpamk5xp506"]
 
 [ext_resource type="Script" uid="uid://cklfhy8nl1rxr" path="res://src/state_machine/state_machine.gd" id="1_vwxh6"]
 [ext_resource type="Script" uid="uid://v0nw33umid6y" path="res://src/player/bigua.gd" id="1_xdlp8"]
@@ -9,6 +9,9 @@
 [ext_resource type="Script" uid="uid://bscswg41pyi5b" path="res://src/player/states/stun.gd" id="7_gi46j"]
 [ext_resource type="Texture2D" uid="uid://bdagmyn231jc4" path="res://icon.svg" id="7_mjcs3"]
 [ext_resource type="Script" uid="uid://b2801xkshcanh" path="res://src/player/states/lose.gd" id="8_iua1b"]
+[ext_resource type="AudioStream" uid="uid://d244js1fx5phh" path="res://assets/sounds/catch.ogg" id="10_dxqql"]
+[ext_resource type="AudioStream" uid="uid://dku8jw6e55m2j" path="res://assets/sounds/diveFullver3.ogg" id="11_m21tw"]
+[ext_resource type="AudioStream" uid="uid://dmnw7y8pelclc" path="res://assets/sounds/diveShort.ogg" id="12_iaqu5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_riuvi"]
 size = Vector2(53, 55)
@@ -106,6 +109,19 @@ offset_top = 38.0
 offset_right = 40.0
 offset_bottom = 61.0
 text = "0"
+
+[node name="sfx" type="Node" parent="."]
+
+[node name="catch" type="AudioStreamPlayer" parent="sfx"]
+stream = ExtResource("10_dxqql")
+
+[node name="dive" type="AudioStreamPlayer" parent="sfx"]
+stream = ExtResource("11_m21tw")
+
+[node name="dive_short" type="AudioStreamPlayer" parent="sfx"]
+stream = ExtResource("12_iaqu5")
+volume_db = -5.0
+pitch_scale = 1.2
 
 [connection signal="timeout" from="States/Idle/StartTimer" to="States/Idle" method="_on_start_timer_timeout"]
 [connection signal="body_entered" from="sprite_water/bico" to="." method="_on_bico_body_entered"]

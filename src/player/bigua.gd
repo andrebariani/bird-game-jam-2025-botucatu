@@ -87,6 +87,7 @@ func _drain_stamina(delta):
 	
 
 func consume_fishes():
+	$sfx/catch.pitch_scale = 1.0
 	var total_stamina = 0
 	for fish in combo_fish_caught:
 		print_debug('caught fish! ', fish.name)
@@ -124,4 +125,13 @@ func _on_bico_body_entered(body):
 			combo_fish_caught.clear()
 		else:
 			combo_fish_caught.append(body.data)
+			$sfx/catch.pitch_scale = lerpf( \
+				$sfx/catch.pitch_scale, 1.5, 0.1 \
+			)
+			play_sfx("catch")
 		body.call_deferred("despawn")
+
+
+func play_sfx(_sfx_name: String):
+	var sfx = get_node_or_null("sfx/" + _sfx_name)
+	sfx.play(0.0)

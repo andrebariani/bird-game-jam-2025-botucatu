@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://c5njpx1r8uwbe"]
+
+[ext_resource type="Script" uid="uid://cp8fmf32y1kuw" path="res://audio.gd" id="1_xp8ed"]
+[ext_resource type="AudioStream" uid="uid://bo56qt4itia5e" path="res://assets/sounds/ambience.ogg" id="2_u2ymj"]
+[ext_resource type="AudioStream" uid="uid://bc7cvwrl5td42" path="res://assets/sounds/ambienceUnderWater.ogg" id="3_nj1b2"]
+[ext_resource type="AudioStream" uid="uid://b23ig7alt0gvi" path="res://assets/bgm/mainSoundtrack.ogg" id="4_mkxb7"]
+[ext_resource type="AudioStream" uid="uid://dki4a0lbq1tsu" path="res://assets/bgm/mainSoundtrackUnderWaterV2.ogg" id="5_28jn8"]
+
+[node name="Audio" type="Node"]
+script = ExtResource("1_xp8ed")
+
+[node name="ambience" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_u2ymj")
+autoplay = true
+
+[node name="ambience_underwater" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_nj1b2")
+volume_db = -80.0
+autoplay = true
+
+[node name="bgm" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_mkxb7")
+volume_db = -5.0
+autoplay = true
+
+[node name="bgm_underwater" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_28jn8")
+autoplay = true
