@@ -31,7 +31,7 @@ enum difficulty_enum {EASY, MEDIUM, HARD}
 func init(_bigua: PlayerBigua):
 	bigua = _bigua
 
-func _ready():
+func start():
 	timer.start(randf_range(0.2, SPAWN_SECONDS))
 	
 func _physics_process(_delta):
