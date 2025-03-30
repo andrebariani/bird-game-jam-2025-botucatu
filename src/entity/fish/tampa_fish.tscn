@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://d2s164n24jnk1"]
+
+[ext_resource type="PackedScene" uid="uid://dm3w76dl2syt8" path="res://src/entity/fish/base_fish.tscn" id="1_0r8m2"]
+[ext_resource type="Resource" uid="uid://dt3il2tpcma0o" path="res://src/entity/fish/data/lixo_tampa.tres" id="2_iiq3r"]
+[ext_resource type="Texture2D" uid="uid://bsbilx5iqcsft" path="res://assets/art/tampa.svg" id="3_i3g2s"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g1p84"]
+radius = 7.0
+height = 50.0
+
+[node name="tampa_fish" instance=ExtResource("1_0r8m2")]
+data = ExtResource("2_iiq3r")
+
+[node name="sprite" parent="." index="0"]
+position = Vector2(1, 5)
+rotation = -0.127409
+scale = Vector2(0.09, 0.09)
+texture = ExtResource("3_i3g2s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_g1p84")

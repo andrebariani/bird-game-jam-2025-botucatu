@@ -1,18 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://dc21wrplv646g"]
+[gd_scene load_steps=5 format=3 uid="uid://dc21wrplv646g"]
 
 [ext_resource type="PackedScene" uid="uid://dm3w76dl2syt8" path="res://src/entity/fish/base_fish.tscn" id="1_06s5u"]
 [ext_resource type="Resource" uid="uid://bokh7mhnffxi5" path="res://src/entity/fish/data/alevino.tres" id="2_6ouhj"]
+[ext_resource type="Texture2D" uid="uid://cb470oj7nkp1k" path="res://assets/art/alevino.svg" id="3_co0rp"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6ouhj"]
-radius = 12.0
+radius = 7.0
 height = 50.0
 
 [node name="SmallFish" instance=ExtResource("1_06s5u")]
 data = ExtResource("2_6ouhj")
 
 [node name="sprite" parent="." index="0"]
-position = Vector2(2.38419e-06, 4.76837e-07)
-scale = Vector2(0.375, 0.1875)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("3_co0rp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
 rotation = 1.5708
