@@ -1,0 +1,58 @@
+[gd_resource type="SpriteFrames" load_steps=13 format=3 uid="uid://3msfemago2lv"]
+
+[ext_resource type="Texture2D" uid="uid://b8ty4qh5s22sh" path="res://assets/Animações/BIGUA/NADANDO/Biguá Nadando 01_00000.png" id="1_ftp7v"]
+[ext_resource type="Texture2D" uid="uid://bq5ri6it8wyqh" path="res://assets/Animações/BIGUA/NADANDO/Biguá Nadando 01_00001.png" id="2_nij7d"]
+[ext_resource type="Texture2D" uid="uid://s5sofsdqwijw" path="res://assets/Animações/BIGUA/NADANDO/Biguá Nadando 01_00002.png" id="3_rbiww"]
+[ext_resource type="Texture2D" uid="uid://bypugwteew2hh" path="res://assets/Animações/BIGUA/NADANDO/Biguá Nadando 01_00003.png" id="4_ns6hs"]
+[ext_resource type="Texture2D" uid="uid://41oyl3rsin6o" path="res://assets/Animações/BIGUA/NADANDO/Biguá Nadando 01_00004.png" id="5_wbthd"]
+[ext_resource type="Texture2D" uid="uid://c7hc0t67tj5di" path="res://assets/Animações/BIGUA/NADANDO/Biguá Nadando 01_00005.png" id="6_ta62t"]
+[ext_resource type="Texture2D" uid="uid://yer4yr7c7wt2" path="res://assets/Animações/BIGUA/NADANDO/Biguá Nadando 01_00006.png" id="7_ighbs"]
+[ext_resource type="Texture2D" uid="uid://1f7uwmada7ga" path="res://assets/Animações/BIGUA/NADANDO/Biguá Nadando 01_00007.png" id="8_u1jp7"]
+[ext_resource type="Texture2D" uid="uid://72ywk06i7u0g" path="res://assets/Animações/BIGUA/NADANDO/Biguá Nadando 01_00008.png" id="9_k203x"]
+[ext_resource type="Texture2D" uid="uid://dy0d0yn2268b2" path="res://assets/Animações/BIGUA/NADANDO/Biguá Nadando 01_00009.png" id="10_yvomn"]
+[ext_resource type="Texture2D" uid="uid://crhdpwjrioq4u" path="res://assets/Animações/BIGUA/NADANDO/Biguá Nadando 01_00010.png" id="11_yj45f"]
+[ext_resource type="Texture2D" uid="uid://b7eykjnm0myv6" path="res://assets/Animações/BIGUA/NADANDO/Biguá Nadando 01_00011.png" id="12_x17ga"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ftp7v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_nij7d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_rbiww")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ns6hs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_wbthd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ta62t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ighbs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_u1jp7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_k203x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_yvomn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_yj45f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_x17ga")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]

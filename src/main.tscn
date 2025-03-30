@@ -540,12 +540,11 @@ position = Vector2(410.909, 214.545)
 scale = Vector2(0.25799, 0.25799)
 sprite_frames = SubResource("SpriteFrames_la2p5")
 autoplay = "default"
-frame_progress = 0.638152
+frame_progress = 0.546758
 speed_scale = 5.0
 
 [node name="bigua" parent="." instance=ExtResource("1_eewff")]
-visible = false
-position = Vector2(512, 212)
+position = Vector2(512, 218)
 
 [node name="FishSpawner" parent="." instance=ExtResource("3_5q4o7")]
 

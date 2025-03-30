@@ -23,9 +23,9 @@ extends Node2D
 enum difficulty_enum {EASY, MEDIUM, HARD}
 @export var difficulty = difficulty_enum.EASY
 @export_subgroup("Probability")
-@export var easy_weights = [2, 1, 0.5]
-@export var medium_weights = [2, 0.5, 1]
-@export var hard_weights = [0.5, 1, 2]
+@export var easy_weights = [2, 1, 0.5, 0.5]
+@export var medium_weights = [2, 0.5, 1, 1]
+@export var hard_weights = [0.5, 1, 2, 2]
 
 @onready var bigua = null
 

@@ -28,12 +28,13 @@ autoplay = true
 
 [node name="bgm" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_mkxb7")
-volume_db = -5.0
+volume_db = -8.0
 autoplay = true
 bus = &"BGM"
 
 [node name="bgm_underwater" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_28jn8")
+volume_db = -3.0
 autoplay = true
 bus = &"BGM"
 

@@ -18,6 +18,8 @@ func begin():
 	e.velocity = Vector2(0, dive_power)
 	e.sprite.rotation = deg_to_rad(90)
 	
+	
+	
 	if e.charge_power >= 40:
 		e.play_sfx("dive")
 	else:

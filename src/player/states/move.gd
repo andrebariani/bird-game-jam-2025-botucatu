@@ -9,9 +9,11 @@ extends State
 
 func begin():
 	var e: PlayerBigua = entity
+	e.head_anim.play("idle")
 	e.charge_power = 0
-	
 	e.consume_fishes()
+	e.sprite_water_top.visible = true
+	e.sprite.visible = false
 
 
 func run(delta):
@@ -26,12 +28,14 @@ func run(delta):
 		e.velocity = e.velocity.move_toward(Vector2(e.inputs.dirv.x * SPEED, 0), ACCEL * delta)
 	
 	if e.inputs.dirv.x == -1:
-		e.sprite.flip_h = true
+		e.sprite_water_top.scale.x = -1
 	elif e.inputs.dirv.x != 0:
-		e.sprite.flip_h = false
+		e.sprite_water_top.scale.x = 1
 		
 	if charge_just_pressed:
 		e.charge_power = e.CHARGE_MIN
+		e.head_anim.play("charge")
+		
 	
 		tween = get_tree().create_tween()
 		tween.tween_property(e, 'charge_power', e.CHARGE_MAX, e.CHARGE_LOAD_SECONDS) \
@@ -41,3 +45,8 @@ func run(delta):
 		tween.stop()
 		AudioGlobal.switch_ambience()
 		end("Dive")
+
+func before_end(_next):
+	var e: PlayerBigua = entity
+	e.sprite_water_top.visible = false
+	e.sprite.visible = true

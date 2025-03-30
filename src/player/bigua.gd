@@ -3,8 +3,10 @@ class_name PlayerBigua
 
 
 @onready var sm = $States
-@onready var sprite = $sprite_water
+@onready var sprite = $sprite_swim
+@onready var sprite_water_top = $body_top
 @onready var breath_timer = $BreathTimer
+@onready var head_anim: AnimationPlayer = $body_top/head/head_anim
 
 # DEBUG
 @export var DEBUG := true
