@@ -1,5 +1,7 @@
 extends State
 
-
-func begin():
-	end("Move")
+func run(_delta):
+	var e: PlayerBigua = entity
+	
+	if e.inputs.dirv:
+		end("Move")

@@ -64,11 +64,18 @@ func _physics_process(delta):
 		sm.run(delta)
 		_drain_stamina(delta)
 		move_and_slide()
+		
+		if stamina <= 0:
+			die()
 	if DEBUG:
 		$Debug/pos.set_text(str(self.get_real_velocity()))
 		$Debug/state.set_text(self.sm.state_curr)
 		$Debug/charge.set_text(str(self.charge_power))
 
+func die():
+	sm.end_current_state("Lose")
+	run = false
+	get_tree().reload_current_scene()
 
 func _drain_stamina(delta):
 	if is_underwater:

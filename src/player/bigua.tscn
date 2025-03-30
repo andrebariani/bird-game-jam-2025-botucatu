@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://rpamk5xp506"]
+[gd_scene load_steps=12 format=3 uid="uid://rpamk5xp506"]
 
 [ext_resource type="Script" uid="uid://cklfhy8nl1rxr" path="res://src/state_machine/state_machine.gd" id="1_vwxh6"]
 [ext_resource type="Script" uid="uid://v0nw33umid6y" path="res://src/player/bigua.gd" id="1_xdlp8"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://dn1225p3c22l6" path="res://src/player/states/swim.gd" id="6_pt8x3"]
 [ext_resource type="Script" uid="uid://bscswg41pyi5b" path="res://src/player/states/stun.gd" id="7_gi46j"]
 [ext_resource type="Texture2D" uid="uid://bdagmyn231jc4" path="res://icon.svg" id="7_mjcs3"]
+[ext_resource type="Script" uid="uid://b2801xkshcanh" path="res://src/player/states/lose.gd" id="8_iua1b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_riuvi"]
 
@@ -48,6 +49,9 @@ script = ExtResource("7_gi46j")
 [node name="Timer" type="Timer" parent="States/Stun"]
 wait_time = 0.5
 one_shot = true
+
+[node name="Lose" type="Node" parent="States"]
+script = ExtResource("8_iua1b")
 
 [node name="sprite_water" type="Sprite2D" parent="."]
 scale = Vector2(0.2, 0.2)
