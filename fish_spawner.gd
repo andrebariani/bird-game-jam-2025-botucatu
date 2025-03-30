@@ -7,6 +7,7 @@ extends Node2D
 	preload("res://src/entity/fish/small_fish.tscn"),
 	preload("res://src/entity/fish/medium_fish.tscn"),
 	preload("res://src/entity/fish/trash.tscn"),
+	preload("res://src/entity/fish/tampa_fish.tscn"),
 ]
 
 @export var MAX_DISTANCE_LEFT = -100

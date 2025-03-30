@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dwx81fexuqpjk"]
+[gd_scene load_steps=53 format=3 uid="uid://dwx81fexuqpjk"]
 
 [ext_resource type="Script" uid="uid://duhbbdujtogiw" path="res://src/main.gd" id="1_3cfgd"]
 [ext_resource type="PackedScene" uid="uid://rpamk5xp506" path="res://src/player/bigua.tscn" id="1_eewff"]
@@ -14,6 +14,36 @@
 [ext_resource type="Texture2D" uid="uid://cjojd8xu6a4e0" path="res://assets/art/background/aguameio.svg" id="10_mgm53"]
 [ext_resource type="Texture2D" uid="uid://dsqmst6dojdjc" path="res://assets/art/background/planta-2.svg" id="10_mlv6i"]
 [ext_resource type="Texture2D" uid="uid://m4762owtn5ov" path="res://assets/art/background/planta-3.svg" id="11_tb146"]
+[ext_resource type="Texture2D" uid="uid://dpmlk8y2umkmv" path="res://assets/Animações/BIGUA/IDDLE/Biguá 01/Biguá 01_00000.png" id="12_ui33j"]
+[ext_resource type="Texture2D" uid="uid://bnj64pxnvjjbg" path="res://assets/Animações/BIGUA/IDDLE/Biguá 01/Biguá 01_00001.png" id="13_k5x6j"]
+[ext_resource type="Texture2D" uid="uid://5givuvuh6km6" path="res://assets/Animações/BIGUA/IDDLE/Biguá 01/Biguá 01_00002.png" id="14_jqey7"]
+[ext_resource type="Texture2D" uid="uid://bu4phm871j1wt" path="res://assets/Animações/BIGUA/IDDLE/Biguá 01/Biguá 01_00003.png" id="15_dqleq"]
+[ext_resource type="Texture2D" uid="uid://cdmk36ybjqh77" path="res://assets/Animações/BIGUA/IDDLE/Biguá 01/Biguá 01_00004.png" id="16_bu6xm"]
+[ext_resource type="Texture2D" uid="uid://dxju3r60iaeiv" path="res://assets/Animações/BIGUA/IDDLE/Biguá 01/Biguá 01_00005.png" id="17_l175r"]
+[ext_resource type="Texture2D" uid="uid://u78jodqivui0" path="res://assets/Animações/BIGUA/IDDLE/Biguá 01/Biguá 01_00006.png" id="18_prqr5"]
+[ext_resource type="Texture2D" uid="uid://woh28o12srm0" path="res://assets/Animações/BIGUA/IDDLE/Biguá 01/Biguá 01_00007.png" id="19_7b4p7"]
+[ext_resource type="Texture2D" uid="uid://covaiwt6dxjm7" path="res://assets/Animações/BIGUA/IDDLE/Biguá 01/Biguá 01_00008.png" id="20_ljw12"]
+[ext_resource type="Texture2D" uid="uid://dotckyqklst57" path="res://assets/Animações/BIGUA/IDDLE/Biguá 01/Biguá 01_00009.png" id="21_q6ill"]
+[ext_resource type="Texture2D" uid="uid://du3v1ig3i8t64" path="res://assets/Animações/BIGUA/IDDLE/Biguá 01/Biguá 01_00010.png" id="22_mmgx3"]
+[ext_resource type="Texture2D" uid="uid://jtcl7tlrp3ft" path="res://assets/Animações/BIGUA/IDDLE/Biguá 01/Biguá 01_00011.png" id="23_hxm6p"]
+[ext_resource type="Texture2D" uid="uid://beplhglwlsqa8" path="res://assets/Animações/BIGUA/IDDLE/Biguá 01/Biguá 01_00012.png" id="24_lj71n"]
+[ext_resource type="Texture2D" uid="uid://nthedofrpbqc" path="res://assets/Animações/BIGUA/IDDLE/Biguá 01/Biguá 01_00013.png" id="25_ruk5h"]
+[ext_resource type="Texture2D" uid="uid://crc85a7kadrjg" path="res://assets/Animações/BIGUA/IDDLE/Biguá 01/Biguá 01_00014.png" id="26_ye406"]
+[ext_resource type="Texture2D" uid="uid://c64yqf1opxgka" path="res://assets/Animações/BIGUA/IDDLE/Biguá 01/Biguá 01_00015.png" id="27_lvuux"]
+[ext_resource type="Texture2D" uid="uid://o5flkoganuyl" path="res://assets/Animações/BIGUA/IDDLE/Biguá 01/Biguá 01_00016.png" id="28_qbv60"]
+[ext_resource type="Texture2D" uid="uid://dhrymkmg835h4" path="res://assets/Animações/BIGUA/IDDLE/Biguá 01/Biguá 01_00017.png" id="29_f6xxb"]
+[ext_resource type="Texture2D" uid="uid://dyp6vruw8ksuh" path="res://assets/Animações/BIGUA/IDDLE/Biguá 01/Biguá 01_00018.png" id="30_s8ip4"]
+[ext_resource type="Texture2D" uid="uid://dwo24mxt3a8va" path="res://assets/Animações/BIGUA/IDDLE/Biguá 01/Biguá 01_00019.png" id="31_j2t2d"]
+[ext_resource type="Texture2D" uid="uid://u1eywdp6aqnk" path="res://assets/Animações/BIGUA/IDDLE/Biguá 01/Biguá 01_00020.png" id="32_kjvtq"]
+[ext_resource type="Texture2D" uid="uid://cxce3bc2808c3" path="res://assets/Animações/BIGUA/IDDLE/Biguá 01/Biguá 01_00021.png" id="33_wkk56"]
+[ext_resource type="Texture2D" uid="uid://cjwlr0qrrf8y7" path="res://assets/Animações/BIGUA/IDDLE/Biguá 01/Biguá 01_00022.png" id="34_1kgfr"]
+[ext_resource type="Texture2D" uid="uid://nptsnqruhwin" path="res://assets/Animações/BIGUA/IDDLE/Biguá 01/Biguá 01_00023.png" id="35_verls"]
+[ext_resource type="Texture2D" uid="uid://c3dhdoj1eda5i" path="res://assets/Animações/BIGUA/IDDLE/Biguá 01/Biguá 01_00024.png" id="36_g5lwp"]
+[ext_resource type="Texture2D" uid="uid://cx72leye8o1su" path="res://assets/Animações/BIGUA/IDDLE/Biguá 01/Biguá 01_00025.png" id="37_11yy6"]
+[ext_resource type="Texture2D" uid="uid://fkq0pi0jgp3u" path="res://assets/Animações/BIGUA/IDDLE/Biguá 01/Biguá 01_00026.png" id="38_uf7yq"]
+[ext_resource type="Texture2D" uid="uid://cq3x43cmtjtwo" path="res://assets/Animações/BIGUA/IDDLE/Biguá 01/Biguá 01_00027.png" id="39_3rdr4"]
+[ext_resource type="Texture2D" uid="uid://bgfv08brhixj2" path="res://assets/Animações/BIGUA/IDDLE/Biguá 01/Biguá 01_00028.png" id="40_ntw4c"]
+[ext_resource type="Texture2D" uid="uid://c1s4d8yg35bff" path="res://assets/Animações/BIGUA/IDDLE/Biguá 01/Biguá 01_00029.png" id="41_2v5er"]
 
 [sub_resource type="Animation" id="Animation_5mrjc"]
 length = 0.001
@@ -76,6 +106,325 @@ _data = {
 &"RESET": SubResource("Animation_5mrjc"),
 &"wave": SubResource("Animation_rlaii")
 }
+
+[sub_resource type="Animation" id="Animation_d3u4l"]
+resource_name = "sway"
+length = 2.8
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:skew")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.221657, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1650.91, 914.545), Vector2(1636.36, 914.545), Vector2(1650.91, 914.545)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Planta-2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.4, 1.36667, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1023.64, 900), Vector2(1007.28, 900), Vector2(1023.64, 900)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Planta-2:skew")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.4, 1.36667, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.221657, 0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Planta-1:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.866667, 0.87, 1.68, 2.37),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(190.909, 940), Vector2(190.909, 940), Vector2(176.363, 940), Vector2(190.909, 940)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Planta-1:skew")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.866667, 1.66667, 2.36667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.261799, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_mlv6i"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:skew")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1640, 916.364)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Planta-2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1023.64, 900)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Planta-2:skew")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Planta-1:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(190.909, 940)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Planta-1:skew")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tb146"]
+_data = {
+&"RESET": SubResource("Animation_mlv6i"),
+&"sway": SubResource("Animation_d3u4l")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_la2p5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_ui33j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_k5x6j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_jqey7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_dqleq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_bu6xm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_l175r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_prqr5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_7b4p7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ljw12")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_q6ill")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_mmgx3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_hxm6p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_lj71n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_ruk5h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_ye406")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_lvuux")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_qbv60")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_f6xxb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_s8ip4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_j2t2d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_kjvtq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_wkk56")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_1kgfr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_verls")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_g5lwp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_11yy6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_uf7yq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_3rdr4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_ntw4c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_2v5er")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ui33j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ui33j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ui33j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ui33j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ui33j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ui33j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ui33j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ui33j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ui33j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ui33j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ui33j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ui33j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ui33j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ui33j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ui33j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ui33j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ui33j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ui33j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ui33j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ui33j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ui33j")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3cfgd"]
 size = Vector2(24.0029, 1144.5)
@@ -150,12 +499,19 @@ position = Vector2(925.455, 1080)
 scale = Vector2(0.664941, 0.664942)
 texture = ExtResource("8_uewes")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenario"]
+[node name="water_anim" type="AnimationPlayer" parent="Scenario"]
 libraries = {
 &"": SubResource("AnimationLibrary_kf8lf")
 }
 autoplay = "wave"
 speed_scale = 0.15
+
+[node name="Agua-fundo-4" type="Sprite2D" parent="Scenario"]
+modulate = Color(0, 0.313726, 1, 0.180392)
+self_modulate = Color(0, 0, 1, 0.815686)
+z_index = 1
+position = Vector2(909.091, 1218.18)
+texture = ExtResource("6_kmhfv")
 
 [node name="Planta-1" type="Sprite2D" parent="Scenario"]
 position = Vector2(190.909, 940)
@@ -172,15 +528,24 @@ position = Vector2(1640, 916.364)
 scale = Vector2(0.684453, 0.684453)
 texture = ExtResource("11_tb146")
 
-[node name="Agua-fundo-4" type="Sprite2D" parent="Scenario"]
-modulate = Color(0, 0.313726, 1, 0.180392)
-self_modulate = Color(0, 0, 1, 0.815686)
-z_index = 1
-position = Vector2(909.091, 1218.18)
-texture = ExtResource("6_kmhfv")
+[node name="sway_anim" type="AnimationPlayer" parent="Scenario/Planta-3"]
+libraries = {
+&"": SubResource("AnimationLibrary_tb146")
+}
+autoplay = "sway"
+speed_scale = 0.5
+
+[node name="big_bigua_rock" type="AnimatedSprite2D" parent="Scenario"]
+position = Vector2(410.909, 214.545)
+scale = Vector2(0.25799, 0.25799)
+sprite_frames = SubResource("SpriteFrames_la2p5")
+autoplay = "default"
+frame_progress = 0.638152
+speed_scale = 5.0
 
 [node name="bigua" parent="." instance=ExtResource("1_eewff")]
-position = Vector2(187, 168)
+visible = false
+position = Vector2(512, 212)
 
 [node name="FishSpawner" parent="." instance=ExtResource("3_5q4o7")]
 

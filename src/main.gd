@@ -7,12 +7,15 @@ extends Node2D
 func _ready():
 	if bigua:
 		bigua.run = false
+		bigua.visible = false
 		spawner.init(bigua)
 		ui.init(bigua)
 		SignalBus.game_start.connect(_on_game_start)
 		
 func _on_game_start():
 	bigua.run = true
+	bigua.visible = true
+	$Scenario/big_bigua_rock.visible = false
 	spawner.start()
 
 func _input(event):
