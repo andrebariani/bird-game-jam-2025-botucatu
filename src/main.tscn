@@ -1,12 +1,15 @@
-[gd_scene load_steps=12 format=3 uid="uid://dwx81fexuqpjk"]
+[gd_scene load_steps=15 format=3 uid="uid://dwx81fexuqpjk"]
 
 [ext_resource type="Script" uid="uid://duhbbdujtogiw" path="res://src/main.gd" id="1_3cfgd"]
 [ext_resource type="PackedScene" uid="uid://rpamk5xp506" path="res://src/player/bigua.tscn" id="1_eewff"]
-[ext_resource type="Texture2D" uid="uid://beigdt2owrxdn" path="res://assets/art/background/terra.svg" id="2_fyndt"]
 [ext_resource type="PackedScene" uid="uid://bh2esqexrici8" path="res://src/entity/spawner/fish_spawner.tscn" id="3_5q4o7"]
+[ext_resource type="Texture2D" uid="uid://bslitlj3v5h2g" path="res://assets/art/background/ceu.svg" id="3_kf8lf"]
 [ext_resource type="Script" uid="uid://bn6lmiyan7ie3" path="res://src/main_ui.gd" id="4_fyndt"]
+[ext_resource type="Texture2D" uid="uid://y7fwcocde3q5" path="res://assets/art/background/sol.svg" id="4_mgm53"]
 [ext_resource type="Texture2D" uid="uid://bo0f8uon11dgf" path="res://assets/art/background/agua-fundo-2.svg" id="4_rlaii"]
+[ext_resource type="Texture2D" uid="uid://b4vtp8wswswp8" path="res://assets/art/background/arvores.svg" id="5_uewes"]
 [ext_resource type="Texture2D" uid="uid://btdwfpaspeoau" path="res://assets/art/background/agua-fundo-1.svg" id="6_kmhfv"]
+[ext_resource type="Texture2D" uid="uid://cjojd8xu6a4e0" path="res://assets/art/background/aguameio.svg" id="10_mgm53"]
 
 [sub_resource type="Animation" id="Animation_5mrjc"]
 length = 0.001
@@ -49,7 +52,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1, 1.96667),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(969.091, 936.364), Vector2(600, 936.364), Vector2(969.091, 936.364)]
+"values": [Vector2(969.091, 932.727), Vector2(600, 932.727), Vector2(969.091, 932.727)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -61,7 +64,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 1, 1.96667),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(921.818, 561.818), Vector2(150, 561.818), Vector2(921.818, 561.818)]
+"values": [Vector2(921.818, 600), Vector2(150, 600), Vector2(921.818, 600)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kf8lf"]
@@ -100,6 +103,10 @@ offset_right = 1905.18
 offset_bottom = 18.8182
 color = Color(0.992157, 0.372549, 0.180392, 1)
 
+[node name="Agua-fundo-3" type="Sprite2D" parent="Scenario"]
+position = Vector2(929.091, 1056.36)
+texture = ExtResource("6_kmhfv")
+
 [node name="water" type="ColorRect" parent="Scenario"]
 offset_left = -55.0
 offset_top = 549.0
@@ -107,21 +114,32 @@ offset_right = 1872.0
 offset_bottom = 1295.0
 color = Color(0.333333, 0.752941, 0.815686, 1)
 
-[node name="Terra" type="Sprite2D" parent="Scenario"]
-position = Vector2(936.364, 7.27263)
-texture = ExtResource("2_fyndt")
+[node name="ceu" type="Sprite2D" parent="Scenario"]
+position = Vector2(950.909, 154.545)
+texture = ExtResource("3_kf8lf")
+
+[node name="Sol" type="Sprite2D" parent="Scenario"]
+position = Vector2(930.909, 12.7273)
+texture = ExtResource("4_mgm53")
+
+[node name="Arvores" type="Sprite2D" parent="Scenario"]
+position = Vector2(940, -29.0909)
+texture = ExtResource("5_uewes")
 
 [node name="Agua-fundo-2" type="Sprite2D" parent="Scenario"]
 position = Vector2(921.818, 561.818)
-scale = Vector2(2.48464, 0.303889)
+scale = Vector2(2.12472, 0.731394)
 texture = ExtResource("4_rlaii")
 
 [node name="Agua-fundo-1" type="Sprite2D" parent="Scenario"]
-modulate = Color(1, 1, 1, 0.423529)
-z_index = 1
 position = Vector2(969.091, 936.364)
 scale = Vector2(1.90164, 0.622892)
 texture = ExtResource("6_kmhfv")
+
+[node name="Aguameio" type="Sprite2D" parent="Scenario"]
+position = Vector2(896.363, 878.182)
+scale = Vector2(0.735586, 0.735586)
+texture = ExtResource("10_mgm53")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Scenario"]
 libraries = {
@@ -131,7 +149,7 @@ autoplay = "wave"
 speed_scale = 0.15
 
 [node name="bigua" parent="." instance=ExtResource("1_eewff")]
-position = Vector2(187, 243)
+position = Vector2(187, 168)
 
 [node name="FishSpawner" parent="." instance=ExtResource("3_5q4o7")]
 

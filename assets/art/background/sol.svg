@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Camada_2" data-name="Camada 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 535 474">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fc3;
+      }
+
+      .cls-2 {
+        fill: #fd8330;
+      }
+
+      .cls-3 {
+        fill: #fe3a2e;
+      }
+
+      .cls-4 {
+        fill: #fd5f2e;
+      }
+
+      .cls-5 {
+        fill: #ffa932;
+      }
+    </style>
+  </defs>
+  <g id="Solzinho">
+    <ellipse class="cls-3" cx="267.5" cy="237" rx="267.5" ry="237"/>
+    <ellipse class="cls-4" cx="267.5" cy="236.52" rx="258.5" ry="231.61"/>
+    <ellipse class="cls-2" cx="267.34" cy="233.01" rx="246.72" ry="221.05"/>
+    <ellipse class="cls-5" cx="266.81" cy="233.49" rx="229.95" ry="206.4"/>
+    <ellipse class="cls-1" cx="267.19" cy="232.98" rx="216.04" ry="193.92"/>
+  </g>
+</svg>

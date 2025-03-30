@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjojd8xu6a4e0"
-path="res://.godot/imported/aguameio.svg-f242a2af6d3683ea7ee8f9f835313885.ctex"
+uid="uid://bslitlj3v5h2g"
+path="res://.godot/imported/ceu.svg-c12ecd73135b5e32d9ab79b6e0bce41c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/background/aguameio.svg"
-dest_files=["res://.godot/imported/aguameio.svg-f242a2af6d3683ea7ee8f9f835313885.ctex"]
+source_file="res://assets/art/background/ceu.svg"
+dest_files=["res://.godot/imported/ceu.svg-c12ecd73135b5e32d9ab79b6e0bce41c.ctex"]
 
 [params]
 

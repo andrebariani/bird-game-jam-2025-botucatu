@@ -8,7 +8,7 @@
 [ext_resource type="Script" uid="uid://dn1225p3c22l6" path="res://src/player/states/swim.gd" id="6_pt8x3"]
 [ext_resource type="Script" uid="uid://bscswg41pyi5b" path="res://src/player/states/stun.gd" id="7_gi46j"]
 [ext_resource type="Texture2D" uid="uid://bdagmyn231jc4" path="res://icon.svg" id="7_mjcs3"]
-[ext_resource type="Script" uid="uid://b2801xkshcanh" path="res://src/player/states/lose.gd" id="8_iua1b"]
+[ext_resource type="Script" path="res://src/player/states/lose.gd" id="8_iua1b"]
 [ext_resource type="AudioStream" uid="uid://d244js1fx5phh" path="res://assets/sounds/catch.ogg" id="10_dxqql"]
 [ext_resource type="AudioStream" uid="uid://dku8jw6e55m2j" path="res://assets/sounds/diveFullver3.ogg" id="11_m21tw"]
 [ext_resource type="AudioStream" uid="uid://dmnw7y8pelclc" path="res://assets/sounds/diveShort.ogg" id="12_iaqu5"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjojd8xu6a4e0"
-path="res://.godot/imported/aguameio.svg-f242a2af6d3683ea7ee8f9f835313885.ctex"
+uid="uid://drqwf2rda4w3r"
+path="res://.godot/imported/terra-2.svg-b9d9522b402cd3f8fc60d453ff8ad51b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/background/aguameio.svg"
-dest_files=["res://.godot/imported/aguameio.svg-f242a2af6d3683ea7ee8f9f835313885.ctex"]
+source_file="res://assets/art/background/terra-2.svg"
+dest_files=["res://.godot/imported/terra-2.svg-b9d9522b402cd3f8fc60d453ff8ad51b.ctex"]
 
 [params]
 
