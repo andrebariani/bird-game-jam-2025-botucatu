@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dwx81fexuqpjk"]
+[gd_scene load_steps=19 format=3 uid="uid://dwx81fexuqpjk"]
 
 [ext_resource type="Script" uid="uid://duhbbdujtogiw" path="res://src/main.gd" id="1_3cfgd"]
 [ext_resource type="PackedScene" uid="uid://rpamk5xp506" path="res://src/player/bigua.tscn" id="1_eewff"]
@@ -9,7 +9,11 @@
 [ext_resource type="Texture2D" uid="uid://bo0f8uon11dgf" path="res://assets/art/background/agua-fundo-2.svg" id="4_rlaii"]
 [ext_resource type="Texture2D" uid="uid://b4vtp8wswswp8" path="res://assets/art/background/arvores.svg" id="5_uewes"]
 [ext_resource type="Texture2D" uid="uid://btdwfpaspeoau" path="res://assets/art/background/agua-fundo-1.svg" id="6_kmhfv"]
+[ext_resource type="Texture2D" uid="uid://cu64414coni4q" path="res://assets/art/background/areia.svg" id="8_uewes"]
+[ext_resource type="Texture2D" uid="uid://b1neakve5te4c" path="res://assets/art/background/planta-1.svg" id="9_d3u4l"]
 [ext_resource type="Texture2D" uid="uid://cjojd8xu6a4e0" path="res://assets/art/background/aguameio.svg" id="10_mgm53"]
+[ext_resource type="Texture2D" uid="uid://dsqmst6dojdjc" path="res://assets/art/background/planta-2.svg" id="10_mlv6i"]
+[ext_resource type="Texture2D" uid="uid://m4762owtn5ov" path="res://assets/art/background/planta-3.svg" id="11_tb146"]
 
 [sub_resource type="Animation" id="Animation_5mrjc"]
 length = 0.001
@@ -89,13 +93,6 @@ offset_right = 1883.36
 offset_bottom = -399.364
 color = Color(0.992157, 0.372549, 0.180392, 1)
 
-[node name="ground" type="ColorRect" parent="Scenario"]
-offset_left = -27.2727
-offset_top = 429.09
-offset_right = 1899.73
-offset_bottom = 866.091
-color = Color(0.0117647, 0.215686, 0.0901961, 1)
-
 [node name="sky" type="ColorRect" parent="Scenario"]
 offset_left = -21.8182
 offset_top = -418.182
@@ -126,6 +123,13 @@ texture = ExtResource("4_mgm53")
 position = Vector2(940, -29.0909)
 texture = ExtResource("5_uewes")
 
+[node name="ground" type="ColorRect" parent="Scenario"]
+offset_left = -98.0
+offset_top = 349.0
+offset_right = 1975.0
+offset_bottom = 819.0
+color = Color(0.254902, 0.290196, 0.0745098, 1)
+
 [node name="Agua-fundo-2" type="Sprite2D" parent="Scenario"]
 position = Vector2(921.818, 561.818)
 scale = Vector2(2.12472, 0.731394)
@@ -137,9 +141,14 @@ scale = Vector2(1.90164, 0.622892)
 texture = ExtResource("6_kmhfv")
 
 [node name="Aguameio" type="Sprite2D" parent="Scenario"]
-position = Vector2(896.363, 878.182)
-scale = Vector2(0.735586, 0.735586)
+position = Vector2(910.696, 844.83)
+scale = Vector2(0.700326, 0.700326)
 texture = ExtResource("10_mgm53")
+
+[node name="Areia" type="Sprite2D" parent="Scenario"]
+position = Vector2(925.455, 1080)
+scale = Vector2(0.664941, 0.664942)
+texture = ExtResource("8_uewes")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Scenario"]
 libraries = {
@@ -147,6 +156,28 @@ libraries = {
 }
 autoplay = "wave"
 speed_scale = 0.15
+
+[node name="Planta-1" type="Sprite2D" parent="Scenario"]
+position = Vector2(190.909, 940)
+scale = Vector2(0.533546, 0.533546)
+texture = ExtResource("9_d3u4l")
+
+[node name="Planta-2" type="Sprite2D" parent="Scenario"]
+position = Vector2(1023.64, 900)
+scale = Vector2(0.710643, 0.710643)
+texture = ExtResource("10_mlv6i")
+
+[node name="Planta-3" type="Sprite2D" parent="Scenario"]
+position = Vector2(1640, 916.364)
+scale = Vector2(0.684453, 0.684453)
+texture = ExtResource("11_tb146")
+
+[node name="Agua-fundo-4" type="Sprite2D" parent="Scenario"]
+modulate = Color(0, 0.313726, 1, 0.180392)
+self_modulate = Color(0, 0, 1, 0.815686)
+z_index = 1
+position = Vector2(909.091, 1218.18)
+texture = ExtResource("6_kmhfv")
 
 [node name="bigua" parent="." instance=ExtResource("1_eewff")]
 position = Vector2(187, 168)
