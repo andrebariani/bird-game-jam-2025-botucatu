@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfyows8jpi5t0"]
+
+[ext_resource type="Texture2D" uid="uid://byo6ftnjq6svw" path="res://assets/art/Biguá gamever.svg" id="1_sviqv"]
+[ext_resource type="Texture2D" uid="uid://bapm2syda75xn" path="res://assets/FONTES/Sem peixe, sem glória. Mas sempre dá pra tentar de novo_.png" id="2_l0a4b"]
+
+[node name="lose" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 234.0
+offset_top = 299.0
+offset_right = 274.0
+offset_bottom = 339.0
+
+[node name="BiguáGamever" type="Sprite2D" parent="."]
+scale = Vector2(0.539063, 0.539063)
+texture = ExtResource("1_sviqv")
+
+[node name="SemPeixe,SemGlória_MasSempreDáPraTentarDeNovo" type="Sprite2D" parent="BiguáGamever"]
+position = Vector2(897.855, 165.101)
+scale = Vector2(0.985343, 0.985343)
+texture = ExtResource("2_l0a4b")

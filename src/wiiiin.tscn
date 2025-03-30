@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cp31l8isewvxn"]
+
+[ext_resource type="Texture2D" uid="uid://cm8458iu0y46x" path="res://assets/art/Biguá Big.svg" id="1_4avph"]
+[ext_resource type="Texture2D" uid="uid://o0gfbi6ta7bm" path="res://assets/FONTES/Você virou o maior Biguá de todos! Rei do mergulho!.png" id="2_8ulh0"]
+
+[node name="wiiiin" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BiguáBig" type="Sprite2D" parent="."]
+position = Vector2(145, 523)
+texture = ExtResource("1_4avph")
+
+[node name="VocêVirouOMaiorBiguáDeTodos!ReiDoMergulho!" type="Sprite2D" parent="BiguáBig"]
+position = Vector2(511, -210)
+scale = Vector2(0.617647, 0.617647)
+texture = ExtResource("2_8ulh0")

@@ -7,7 +7,8 @@ func init(_bigua: PlayerBigua):
 	bigua = _bigua
 
 func _ready() -> void:
-	$Button.grab_focus()
+	pass
+	# $Button.grab_focus()
 
 func _process(_delta):
 	$energy.set_text(str(bigua.stamina))

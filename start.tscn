@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5cmf4wdktrh5"]
+
+[ext_resource type="Texture2D" uid="uid://ccdr36tpv48kn" path="res://assets/FONTES/Pressione Espaço.png" id="1_qn1rc"]
+[ext_resource type="Texture2D" uid="uid://blxjusytxqaq8" path="res://assets/FONTES/Você é um Biguá faminto. Coma peixes. Vire lenda_.png" id="2_1n0d2"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 360.0
+offset_top = 394.0
+offset_right = 626.0
+offset_bottom = 437.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("1_qn1rc")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="VocêÉUmBiguáFaminto_ComaPeixes_VireLenda" type="Sprite2D" parent="Button"]
+position = Vector2(127, -107)
+scale = Vector2(0.537551, 0.537551)
+texture = ExtResource("2_1n0d2")

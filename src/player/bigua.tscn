@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://dsg71tn0ldhpm" path="res://src/player/states/dive.gd" id="5_875bn"]
 [ext_resource type="Script" uid="uid://dn1225p3c22l6" path="res://src/player/states/swim.gd" id="6_pt8x3"]
 [ext_resource type="Script" uid="uid://bscswg41pyi5b" path="res://src/player/states/stun.gd" id="7_gi46j"]
-[ext_resource type="Script" uid="uid://b2801xkshcanh" path="res://src/player/states/lose.gd" id="8_iua1b"]
+[ext_resource type="Script" path="res://src/player/states/lose.gd" id="8_iua1b"]
 [ext_resource type="SpriteFrames" uid="uid://3msfemago2lv" path="res://src/player/resources/body_anim.tres" id="9_iaqu5"]
 [ext_resource type="AudioStream" uid="uid://d244js1fx5phh" path="res://assets/sounds/catch.ogg" id="10_dxqql"]
 [ext_resource type="Texture2D" uid="uid://dosatietku3s0" path="res://assets/Animações/BIGUA/NADANDO/cabeça-nadando.svg" id="10_wurod"]
@@ -241,7 +241,6 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sprite_swim/bico"]
 position = Vector2(11.05, -0.9)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_mjcs3")
 
 [node name="body" type="AnimatedSprite2D" parent="sprite_swim"]
