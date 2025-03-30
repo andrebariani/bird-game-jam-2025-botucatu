@@ -114,6 +114,7 @@ text = "0"
 
 [node name="catch" type="AudioStreamPlayer" parent="sfx"]
 stream = ExtResource("10_dxqql")
+volume_db = 12.0
 
 [node name="dive" type="AudioStreamPlayer" parent="sfx"]
 stream = ExtResource("11_m21tw")

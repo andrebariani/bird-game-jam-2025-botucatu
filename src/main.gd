@@ -17,4 +17,5 @@ func _on_game_start():
 
 func _input(event):
 	if event.is_action_pressed("ui_cancel"):
+		AudioGlobal.reset()
 		get_tree().reload_current_scene()

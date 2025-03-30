@@ -75,6 +75,7 @@ func _physics_process(delta):
 func die():
 	sm.end_current_state("Lose")
 	run = false
+	AudioGlobal.reset()
 	get_tree().reload_current_scene()
 
 func _drain_stamina(delta):
