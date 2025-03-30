@@ -116,21 +116,4 @@ metadata/_edit_lock_ = true
 position = Vector2(411, 103)
 shape = SubResource("RectangleShape2D_3cfgd")
 
-[node name="effects" type="Node2D" parent="."]
-
-[node name="CPUParticles2D" type="CPUParticles2D" parent="effects"]
-visible = false
-position = Vector2(287, 210)
-lifetime = 0.32
-preprocess = 3.23
-speed_scale = 0.5
-randomness = 0.04
-draw_order = 1
-emission_shape = 1
-emission_sphere_radius = 89.11
-spread = 43.7
-gravity = Vector2(0, -980)
-scale_amount_min = 5.0
-scale_amount_max = 10.0
-
 [connection signal="pressed" from="MainUI/Button" to="MainUI" method="_on_button_pressed"]
