@@ -1,15 +1,56 @@
-[gd_scene load_steps=6 format=3 uid="uid://dwx81fexuqpjk"]
+[gd_scene load_steps=9 format=3 uid="uid://dwx81fexuqpjk"]
 
 [ext_resource type="Script" uid="uid://duhbbdujtogiw" path="res://src/main.gd" id="1_3cfgd"]
 [ext_resource type="PackedScene" uid="uid://rpamk5xp506" path="res://src/player/bigua.tscn" id="1_eewff"]
+[ext_resource type="Texture2D" uid="uid://beigdt2owrxdn" path="res://assets/art/background/terra.svg" id="2_fyndt"]
 [ext_resource type="PackedScene" uid="uid://bh2esqexrici8" path="res://src/entity/spawner/fish_spawner.tscn" id="3_5q4o7"]
 [ext_resource type="Script" uid="uid://bn6lmiyan7ie3" path="res://src/main_ui.gd" id="4_fyndt"]
+[ext_resource type="Texture2D" uid="uid://bo0f8uon11dgf" path="res://assets/art/background/agua-fundo-2.svg" id="4_rlaii"]
+[ext_resource type="Texture2D" uid="uid://btdwfpaspeoau" path="res://assets/art/background/agua-fundo-1.svg" id="6_kmhfv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3cfgd"]
 size = Vector2(20, 444)
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_3cfgd")
+
+[node name="Scenario" type="Node2D" parent="."]
+scale = Vector2(0.55, 0.55)
+
+[node name="river" type="ColorRect" parent="Scenario"]
+offset_left = -43.6365
+offset_top = -836.364
+offset_right = 1883.36
+offset_bottom = -399.364
+color = Color(0.992157, 0.372549, 0.180392, 1)
+
+[node name="sky" type="ColorRect" parent="Scenario"]
+offset_left = -27.2727
+offset_top = 496.363
+offset_right = 1899.73
+offset_bottom = 933.364
+color = Color(0.0117647, 0.215686, 0.0901961, 1)
+
+[node name="floor" type="ColorRect" parent="Scenario"]
+offset_left = -21.8182
+offset_top = -418.182
+offset_right = 1905.18
+offset_bottom = 18.8182
+color = Color(0.992157, 0.372549, 0.180392, 1)
+
+[node name="Terra" type="Sprite2D" parent="Scenario"]
+position = Vector2(936.364, 110.909)
+texture = ExtResource("2_fyndt")
+
+[node name="Agua-fundo-1" type="Sprite2D" parent="Scenario"]
+position = Vector2(972.727, 1036.36)
+scale = Vector2(1, 0.622892)
+texture = ExtResource("6_kmhfv")
+
+[node name="Agua-fundo-2" type="Sprite2D" parent="Scenario"]
+position = Vector2(854.545, 669.091)
+scale = Vector2(1, 0.303889)
+texture = ExtResource("4_rlaii")
 
 [node name="bigua" parent="." instance=ExtResource("1_eewff")]
 position = Vector2(176, 65)

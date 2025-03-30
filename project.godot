@@ -25,10 +25,8 @@ SignalBus="*res://src/signal_bus.gd"
 
 [display]
 
-window/size/viewport_width=400
-window/size/viewport_height=224
-window/size/window_width_override=800
-window/size/window_height_override=448
+window/size/viewport_width=1024
+window/size/viewport_height=576
 window/stretch/mode="viewport"
 window/stretch/scale_mode="integer"
 
