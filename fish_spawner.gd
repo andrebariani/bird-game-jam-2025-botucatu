@@ -65,7 +65,6 @@ func spawn_fish(fish: BaseFish):
 	
 	var pos = Vector2.ZERO
 	
-	print_debug(fish.data.size_class)
 	match fish.data.size_class:
 		"Small":
 			pos = Vector2(MAX_DISTANCE_LEFT, randi_range( \

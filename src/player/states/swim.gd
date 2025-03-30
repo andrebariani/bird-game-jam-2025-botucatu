@@ -21,6 +21,7 @@ func run(delta):
 func before_end(_next):
 	var e: PlayerBigua = entity
 	if _next == "Move":
+		e.play_sfx("rise")
 		AudioGlobal.switch_ambience()
 		e.breath_timer.stop()
 		e.is_underwater = false
