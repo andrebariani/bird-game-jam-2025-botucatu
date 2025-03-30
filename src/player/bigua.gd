@@ -104,6 +104,7 @@ func _on_bico_body_entered(body):
 	if body is BaseFish:
 		if body.data.size_class == "Trash":
 			sm.end_current_state("Stun")
+			stamina += body.data.stamina
 			combo_fish_caught.clear()
 		else:
 			combo_fish_caught.append(body.data)
