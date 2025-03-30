@@ -77,6 +77,15 @@ func _drain_stamina(delta):
 		else:
 			stamina = (stamina - BREATH_DRAIN_RATE * delta)
 	stamina = (stamina - 1 * delta)
+	
+
+func consume_fishes():
+	var total_stamina = 0
+	for fish in combo_fish_caught:
+		print_debug('caught fish! ', fish.name)
+		total_stamina += fish.stamina
+	stamina += total_stamina + (total_stamina * (combo_fish_caught.size() - 1)) / 4
+	combo_fish_caught = []
 
 
 var run_input = true

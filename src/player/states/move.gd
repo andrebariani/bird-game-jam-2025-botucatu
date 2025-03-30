@@ -9,10 +9,8 @@ extends State
 
 func begin():
 	var e: PlayerBigua = entity
-	for fish in e.combo_fish_caught:
-		print_debug('caught fish!', fish.name)
-		e.stamina += fish.stamina
-	e.combo_fish_caught = []
+	
+	e.consume_fishes()
 
 
 func run(delta):
