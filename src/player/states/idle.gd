@@ -7,5 +7,4 @@ func run(_delta):
 		$StartTimer.start()
 
 func _on_start_timer_timeout():
-	print_debug('help')
 	end("Move")

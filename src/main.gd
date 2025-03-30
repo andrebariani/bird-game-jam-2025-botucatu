@@ -11,21 +11,25 @@ func _ready():
 		spawner.init(bigua)
 		ui.init(bigua)
 		SignalBus.game_start.connect(_on_game_start)
-		SignalBus.game_over.connect(_on_game_start)
+		SignalBus.game_over.connect(_on_game_over)
 		SignalBus.game_win.connect(_on_game_win)
 
 func _on_game_over():
 	bigua.run = false
 	bigua.visible = false
 	
-	
+	ui.lose_btn.grab_focus()
 	ui.lose.visible = true
+	ui.energy_bar.visible = false
 	
 func _on_game_win():
 	bigua.run = false
 	bigua.visible = false
 	
+	ui.win_btn.grab_focus()
 	ui.win.visible = true
+	
+	ui.energy_bar.visible = false
 		
 func _on_game_start():
 	bigua.run = true

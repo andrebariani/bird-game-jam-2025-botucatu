@@ -3,6 +3,8 @@ extends Control
 
 @onready var bigua: PlayerBigua
 
+@onready var energy_bar = $energy_bar
+
 @onready var win = $wiiiin
 @onready var win_btn = $wiiiin/win_button
 @onready var lose = $lose

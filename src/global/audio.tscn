@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://c5njpx1r8uwbe"]
+[gd_scene load_steps=15 format=3 uid="uid://c5njpx1r8uwbe"]
 
 [ext_resource type="Script" uid="uid://cp8fmf32y1kuw" path="res://audio.gd" id="1_xp8ed"]
 [ext_resource type="AudioStream" uid="uid://bo56qt4itia5e" path="res://assets/sounds/ambience.ogg" id="2_u2ymj"]
 [ext_resource type="AudioStream" uid="uid://bc7cvwrl5td42" path="res://assets/sounds/ambienceUnderWater.ogg" id="3_nj1b2"]
 [ext_resource type="AudioStream" uid="uid://b23ig7alt0gvi" path="res://assets/bgm/mainSoundtrack.ogg" id="4_mkxb7"]
 [ext_resource type="AudioStream" uid="uid://dki4a0lbq1tsu" path="res://assets/bgm/mainSoundtrackUnderWaterV2.ogg" id="5_28jn8"]
+[ext_resource type="AudioStream" uid="uid://cyf3on1pyi7c3" path="res://assets/sounds/game_over.wav" id="6_18jrf"]
 [ext_resource type="AudioStream" uid="uid://dvgfwk5blkipq" path="res://assets/sounds/ambience/bigua_1.ogg" id="6_w2bdt"]
 [ext_resource type="AudioStream" uid="uid://c0s1kdco3sr78" path="res://assets/sounds/ambience/bigua_2.ogg" id="7_65s8i"]
 [ext_resource type="AudioStream" uid="uid://4em32c0qmqkq" path="res://assets/sounds/ambience/choquinha-lisa.ogg" id="8_fss7p"]
@@ -37,6 +38,9 @@ stream = ExtResource("5_28jn8")
 volume_db = -3.0
 autoplay = true
 bus = &"BGM"
+
+[node name="lose" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_18jrf")
 
 [node name="sfxs" type="Node" parent="."]
 

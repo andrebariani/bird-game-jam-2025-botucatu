@@ -7,12 +7,24 @@ var ambience_sfxs = []
 @export var min_cuttout_freq = 8000
 
 func _ready():
+	SignalBus.game_over.connect(_on_game_over)
+	SignalBus.game_win.connect(_on_game_win)
+	
 	var sfxs = $sfxs.get_children()
 	
 	for sfx in sfxs:
 		ambience_sfxs.append(sfx)
 		
 	$Timer.start(randi_range(5, 15))
+
+func _on_game_over():
+	$bgm.stop()
+	$bgm_underwater.stop()
+	$lose.play(0.0)
+	
+func _on_game_win():
+	$bgm.stop()
+	$bgm_underwater.stop()
 
 
 func reset():

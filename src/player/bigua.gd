@@ -78,14 +78,12 @@ func _physics_process(delta):
 		$Debug/charge.set_text(str(self.charge_power))
 
 func die():
-	get_tree().reload_current_scene()
 	sm.end_current_state("Lose")
 	run = false
 	AudioGlobal.reset()
 	SignalBus.game_over.emit()
 	
 func win():
-	get_tree().reload_current_scene()
 	sm.end_current_state("Lose")
 	run = false
 	AudioGlobal.reset()
