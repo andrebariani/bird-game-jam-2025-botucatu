@@ -27,7 +27,6 @@ func run(delta):
 func before_end(_next):
 	var e: BaseFish = entity
 	
-	if not e.just_spawned:
-		e.choose_flip()
-	if not e.detected:
-		e.choose_flip()
+	if e.just_spawned:
+		return
+	e.choose_flip()
