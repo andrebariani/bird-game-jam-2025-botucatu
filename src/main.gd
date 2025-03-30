@@ -11,6 +11,21 @@ func _ready():
 		spawner.init(bigua)
 		ui.init(bigua)
 		SignalBus.game_start.connect(_on_game_start)
+		SignalBus.game_over.connect(_on_game_start)
+		SignalBus.game_win.connect(_on_game_win)
+
+func _on_game_over():
+	bigua.run = false
+	bigua.visible = false
+	
+	
+	ui.lose.visible = true
+	
+func _on_game_win():
+	bigua.run = false
+	bigua.visible = false
+	
+	ui.win.visible = true
 		
 func _on_game_start():
 	bigua.run = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://dwx81fexuqpjk"]
+[gd_scene load_steps=62 format=3 uid="uid://dwx81fexuqpjk"]
 
 [ext_resource type="Script" uid="uid://duhbbdujtogiw" path="res://src/main.gd" id="1_3cfgd"]
 [ext_resource type="PackedScene" uid="uid://rpamk5xp506" path="res://src/player/bigua.tscn" id="1_eewff"]
@@ -43,7 +43,16 @@
 [ext_resource type="Texture2D" uid="uid://cq3x43cmtjtwo" path="res://assets/Animações/BIGUA/IDDLE/Biguá 01/Biguá 01_00027.png" id="39_3rdr4"]
 [ext_resource type="Texture2D" uid="uid://bgfv08brhixj2" path="res://assets/Animações/BIGUA/IDDLE/Biguá 01/Biguá 01_00028.png" id="40_ntw4c"]
 [ext_resource type="Texture2D" uid="uid://c1s4d8yg35bff" path="res://assets/Animações/BIGUA/IDDLE/Biguá 01/Biguá 01_00029.png" id="41_2v5er"]
-[ext_resource type="PackedScene" uid="uid://sx1qsovdxoqy" path="res://src/ui/main_ui.tscn" id="44_ui33j"]
+[ext_resource type="Script" uid="uid://bn6lmiyan7ie3" path="res://src/main_ui.gd" id="44_q6ill"]
+[ext_resource type="Texture2D" uid="uid://bcq2jv20un7km" path="res://assets/art/barra/Ativo 4.svg" id="45_mmgx3"]
+[ext_resource type="Texture2D" uid="uid://ehvpyohixtaw" path="res://assets/art/barra/Ativo 2.svg" id="46_hxm6p"]
+[ext_resource type="Texture2D" uid="uid://cb4s6m1a7div1" path="res://assets/art/barra/Ativo 1.svg" id="47_lj71n"]
+[ext_resource type="Texture2D" uid="uid://ccdr36tpv48kn" path="res://assets/FONTES/Pressione Espaço.png" id="48_ruk5h"]
+[ext_resource type="Texture2D" uid="uid://blxjusytxqaq8" path="res://assets/FONTES/Você é um Biguá faminto. Coma peixes. Vire lenda_.png" id="49_ye406"]
+[ext_resource type="Texture2D" uid="uid://byo6ftnjq6svw" path="res://assets/art/Biguá gamever.svg" id="50_lvuux"]
+[ext_resource type="Texture2D" uid="uid://bapm2syda75xn" path="res://assets/FONTES/Sem peixe, sem glória. Mas sempre dá pra tentar de novo_.png" id="51_qbv60"]
+[ext_resource type="Texture2D" uid="uid://cm8458iu0y46x" path="res://assets/art/Biguá Big.svg" id="52_f6xxb"]
+[ext_resource type="Texture2D" uid="uid://o0gfbi6ta7bm" path="res://assets/FONTES/Você virou o maior Biguá de todos! Rei do mergulho!.png" id="53_s8ip4"]
 
 [sub_resource type="Animation" id="Animation_5mrjc"]
 length = 0.001
@@ -548,7 +557,104 @@ position = Vector2(512, 218)
 
 [node name="FishSpawner" parent="." instance=ExtResource("3_5q4o7")]
 
-[node name="MainUI" parent="." instance=ExtResource("44_ui33j")]
+[node name="MainUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_right = 1024.0
+offset_bottom = 576.0
+grow_horizontal = 0
+script = ExtResource("44_q6ill")
+
+[node name="energy_bar" type="TextureProgressBar" parent="MainUI"]
+visible = false
+layout_mode = 0
+offset_left = 24.0
+offset_top = 20.0
+offset_right = 482.0
+offset_bottom = 83.0
+max_value = 10000.0
+texture_under = ExtResource("45_mmgx3")
+texture_progress = ExtResource("46_hxm6p")
+
+[node name="Ativo1" type="Sprite2D" parent="MainUI/energy_bar"]
+position = Vector2(134, 32)
+texture = ExtResource("47_lj71n")
+
+[node name="energy" type="Label" parent="MainUI"]
+visible = false
+layout_mode = 0
+offset_right = 65.0
+offset_bottom = 23.0
+
+[node name="Button" type="TextureButton" parent="MainUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -132.0
+offset_top = 126.0
+offset_right = 134.0
+offset_bottom = 169.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("48_ruk5h")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="VocêÉUmBiguáFaminto_ComaPeixes_VireLenda" type="Sprite2D" parent="MainUI/Button"]
+position = Vector2(127, -107)
+scale = Vector2(0.537551, 0.537551)
+texture = ExtResource("49_ye406")
+
+[node name="lose" type="Control" parent="MainUI"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 234.0
+offset_top = 299.0
+offset_right = 274.0
+offset_bottom = 339.0
+
+[node name="BiguáGamever" type="Sprite2D" parent="MainUI/lose"]
+scale = Vector2(0.539063, 0.539063)
+texture = ExtResource("50_lvuux")
+
+[node name="SemPeixe,SemGlória_MasSempreDáPraTentarDeNovo" type="Sprite2D" parent="MainUI/lose/BiguáGamever"]
+position = Vector2(897.855, 165.101)
+scale = Vector2(0.985343, 0.985343)
+texture = ExtResource("51_qbv60")
+
+[node name="lose_button" type="Button" parent="MainUI/lose"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="wiiiin" type="Control" parent="MainUI"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BiguáBig" type="Sprite2D" parent="MainUI/wiiiin"]
+position = Vector2(145, 523)
+texture = ExtResource("52_f6xxb")
+
+[node name="VocêVirouOMaiorBiguáDeTodos!ReiDoMergulho!" type="Sprite2D" parent="MainUI/wiiiin/BiguáBig"]
+position = Vector2(511, -210)
+scale = Vector2(0.617647, 0.617647)
+texture = ExtResource("53_s8ip4")
+
+[node name="win_button" type="Button" parent="MainUI/wiiiin"]
+layout_mode = 0
+offset_left = -19.0
+offset_top = -19.0
+offset_right = -11.0
+offset_bottom = -11.0
 
 [node name="Walls" type="Node2D" parent="."]
 
@@ -579,3 +685,7 @@ metadata/_edit_lock_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/WallRight"]
 position = Vector2(1035, 269.5)
 shape = SubResource("RectangleShape2D_3cfgd")
+
+[connection signal="pressed" from="MainUI/Button" to="MainUI" method="_on_button_pressed"]
+[connection signal="pressed" from="MainUI/lose/lose_button" to="MainUI" method="_on_lose_button_pressed"]
+[connection signal="pressed" from="MainUI/wiiiin/win_button" to="MainUI" method="_on_win_button_pressed"]

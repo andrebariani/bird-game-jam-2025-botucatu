@@ -20,6 +20,7 @@ func run(delta):
 
 func before_end(_next):
 	var e: PlayerBigua = entity
+	e.sprite_beak_fish.visible = false
 	if _next == "Move":
 		e.play_sfx("rise")
 		AudioGlobal.switch_ambience()

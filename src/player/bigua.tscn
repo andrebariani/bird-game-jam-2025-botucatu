@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://rpamk5xp506"]
+[gd_scene load_steps=23 format=3 uid="uid://rpamk5xp506"]
 
 [ext_resource type="Script" uid="uid://cklfhy8nl1rxr" path="res://src/state_machine/state_machine.gd" id="1_vwxh6"]
 [ext_resource type="Script" uid="uid://v0nw33umid6y" path="res://src/player/bigua.gd" id="1_xdlp8"]
@@ -7,12 +7,14 @@
 [ext_resource type="Script" uid="uid://dsg71tn0ldhpm" path="res://src/player/states/dive.gd" id="5_875bn"]
 [ext_resource type="Script" uid="uid://dn1225p3c22l6" path="res://src/player/states/swim.gd" id="6_pt8x3"]
 [ext_resource type="Script" uid="uid://bscswg41pyi5b" path="res://src/player/states/stun.gd" id="7_gi46j"]
-[ext_resource type="Script" path="res://src/player/states/lose.gd" id="8_iua1b"]
+[ext_resource type="Script" uid="uid://b2801xkshcanh" path="res://src/player/states/lose.gd" id="8_iua1b"]
+[ext_resource type="Texture2D" uid="uid://cb470oj7nkp1k" path="res://assets/art/alevino.svg" id="9_5btuu"]
 [ext_resource type="SpriteFrames" uid="uid://3msfemago2lv" path="res://src/player/resources/body_anim.tres" id="9_iaqu5"]
 [ext_resource type="AudioStream" uid="uid://d244js1fx5phh" path="res://assets/sounds/catch.ogg" id="10_dxqql"]
 [ext_resource type="Texture2D" uid="uid://dosatietku3s0" path="res://assets/Animações/BIGUA/NADANDO/cabeça-nadando.svg" id="10_wurod"]
 [ext_resource type="AudioStream" uid="uid://dku8jw6e55m2j" path="res://assets/sounds/diveFullver3.ogg" id="11_m21tw"]
 [ext_resource type="AudioStream" uid="uid://dmnw7y8pelclc" path="res://assets/sounds/diveShort.ogg" id="12_iaqu5"]
+[ext_resource type="AudioStream" uid="uid://kgspphqeukx4" path="res://assets/sounds/gameOver.ogg" id="16_35ci3"]
 [ext_resource type="Texture2D" uid="uid://bnu5jqasqvppr" path="res://assets/Animações/BIGUA/NADANDO/cabeça.svg" id="21_qchx4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_riuvi"]
@@ -184,6 +186,7 @@ _data = {
 [node name="bigua" type="CharacterBody2D"]
 collision_mask = 4
 script = ExtResource("1_xdlp8")
+DEBUG = false
 SPEED = 250.0
 ROTATION_SPEED = 0.1
 FRICTION = 50
@@ -233,6 +236,14 @@ one_shot = true
 script = ExtResource("8_iua1b")
 
 [node name="sprite_swim" type="Node2D" parent="."]
+visible = false
+
+[node name="fish" type="Sprite2D" parent="sprite_swim"]
+visible = false
+position = Vector2(75, -2)
+rotation = -1.19555
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("9_5btuu")
 
 [node name="bico" type="Area2D" parent="sprite_swim"]
 scale = Vector2(5, 5)
@@ -256,7 +267,6 @@ scale = Vector2(0.139822, 0.139822)
 texture = ExtResource("10_wurod")
 
 [node name="body_top" type="Node2D" parent="."]
-visible = false
 position = Vector2(0, 5)
 
 [node name="sprite_water" type="AnimatedSprite2D" parent="body_top"]
@@ -312,6 +322,7 @@ volume_db = 12.0
 
 [node name="dive" type="AudioStreamPlayer" parent="sfx"]
 stream = ExtResource("11_m21tw")
+volume_db = -5.0
 
 [node name="dive_short" type="AudioStreamPlayer" parent="sfx"]
 stream = ExtResource("12_iaqu5")
@@ -320,6 +331,11 @@ pitch_scale = 1.2
 
 [node name="rise" type="AudioStreamPlayer" parent="sfx"]
 stream = ExtResource("12_iaqu5")
+volume_db = -10.0
+pitch_scale = 1.5
+
+[node name="stun" type="AudioStreamPlayer" parent="sfx"]
+stream = ExtResource("16_35ci3")
 volume_db = -10.0
 pitch_scale = 1.5
 

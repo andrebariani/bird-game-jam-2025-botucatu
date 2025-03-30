@@ -5,6 +5,7 @@ class_name PlayerBigua
 @onready var sm = $States
 @onready var sprite = $sprite_swim
 @onready var sprite_water_top = $body_top
+@onready var sprite_beak_fish = $sprite_swim/fish
 @onready var breath_timer = $BreathTimer
 @onready var head_anim: AnimationPlayer = $body_top/head/head_anim
 
@@ -69,16 +70,27 @@ func _physics_process(delta):
 		
 		if stamina <= 0:
 			die()
+		if stamina > 10000:
+			win()
 	if DEBUG:
 		$Debug/pos.set_text(str(self.get_real_velocity()))
 		$Debug/state.set_text(self.sm.state_curr)
 		$Debug/charge.set_text(str(self.charge_power))
 
 func die():
+	get_tree().reload_current_scene()
 	sm.end_current_state("Lose")
 	run = false
 	AudioGlobal.reset()
+	SignalBus.game_over.emit()
+	
+func win():
 	get_tree().reload_current_scene()
+	sm.end_current_state("Lose")
+	run = false
+	AudioGlobal.reset()
+	SignalBus.game_win.emit()
+	
 
 func _drain_stamina(delta):
 	if is_underwater:
@@ -125,8 +137,10 @@ func _on_bico_body_entered(body):
 		if body.data.size_class == "Trash":
 			sm.end_current_state("Stun")
 			stamina += body.data.stamina
+			sprite_beak_fish.visible = false
 			combo_fish_caught.clear()
 		else:
+			sprite_beak_fish.visible = true
 			combo_fish_caught.append(body.data)
 			$sfx/catch.pitch_scale = lerpf( \
 				$sfx/catch.pitch_scale, 1.5, 0.1 \
