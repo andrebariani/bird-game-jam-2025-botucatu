@@ -34,6 +34,10 @@ script = ExtResource("1_vwxh6")
 [node name="Idle" type="Node" parent="States"]
 script = ExtResource("3_xrvsa")
 
+[node name="StartTimer" type="Timer" parent="States/Idle"]
+wait_time = 0.1
+one_shot = true
+
 [node name="Move" type="Node" parent="States"]
 script = ExtResource("4_5aio1")
 
@@ -93,4 +97,5 @@ offset_right = 40.0
 offset_bottom = 61.0
 text = "0"
 
+[connection signal="timeout" from="States/Idle/StartTimer" to="States/Idle" method="_on_start_timer_timeout"]
 [connection signal="body_entered" from="sprite_water/bico" to="." method="_on_bico_body_entered"]
