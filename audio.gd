@@ -6,6 +6,11 @@ var ambience_sfxs = []
 
 @export var min_cuttout_freq = 8000
 
+var bgm_original_volume = 0.0
+var bgm_underwater_original_volume = 0.0
+var ambience_original_volume = 0.0
+var ambience_underwater_original_volume = 0.0
+
 func _ready():
 	SignalBus.game_over.connect(_on_game_over)
 	SignalBus.game_win.connect(_on_game_win)
@@ -14,7 +19,11 @@ func _ready():
 	
 	for sfx in sfxs:
 		ambience_sfxs.append(sfx)
-		
+	
+	bgm_original_volume = $bgm.volume_db
+	bgm_underwater_original_volume = $bgm_underwater.volume_db
+	ambience_original_volume = $ambience.volume_db
+	ambience_underwater_original_volume = $ambience_underwater.volume_db
 	$Timer.start(randi_range(5, 15))
 
 func _on_game_over():
@@ -40,14 +49,14 @@ func switch_ambience():
 	above_water = !above_water
 	
 	if above_water:
-		$ambience.volume_db = 0
+		$ambience.volume_db = ambience_original_volume
 		$ambience_underwater.volume_db = -80
 		$bgm_underwater.volume_db = -80
 		underwater_effect.cutoff_hz = 20500
 	else:
 		$ambience.volume_db = -80
-		$ambience_underwater.volume_db = 0
-		$bgm_underwater.volume_db = 0
+		$ambience_underwater.volume_db = ambience_underwater_original_volume
+		$bgm_underwater.volume_db = bgm_underwater_original_volume
 		underwater_effect.cutoff_hz = min_cuttout_freq
 
 

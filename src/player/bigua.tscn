@@ -318,7 +318,7 @@ text = "0"
 
 [node name="catch" type="AudioStreamPlayer" parent="sfx"]
 stream = ExtResource("10_dxqql")
-volume_db = 12.0
+volume_db = -10.0
 
 [node name="dive" type="AudioStreamPlayer" parent="sfx"]
 stream = ExtResource("11_m21tw")
@@ -337,7 +337,6 @@ pitch_scale = 1.5
 [node name="stun" type="AudioStreamPlayer" parent="sfx"]
 stream = ExtResource("16_35ci3")
 volume_db = -10.0
-pitch_scale = 1.5
 
 [connection signal="timeout" from="States/Idle/StartTimer" to="States/Idle" method="_on_start_timer_timeout"]
 [connection signal="body_entered" from="sprite_swim/bico" to="." method="_on_bico_body_entered"]

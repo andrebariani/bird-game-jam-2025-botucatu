@@ -27,9 +27,9 @@ func run(delta):
 	if e.inputs.dirv:
 		e.velocity = e.velocity.move_toward(Vector2(e.inputs.dirv.x * SPEED, 0), ACCEL * delta)
 	
-	if e.inputs.dirv.x == -1:
+	if e.inputs.dirv.x < 0:
 		e.sprite_water_top.scale.x = -1
-	elif e.inputs.dirv.x != 0:
+	if e.inputs.dirv.x > 0:
 		e.sprite_water_top.scale.x = 1
 		
 	if charge_just_pressed:
