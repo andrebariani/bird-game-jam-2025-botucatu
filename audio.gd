@@ -11,6 +11,8 @@ var bgm_underwater_original_volume = 0.0
 var ambience_original_volume = 0.0
 var ambience_underwater_original_volume = 0.0
 
+var above_water = true
+
 func _ready():
 	SignalBus.game_over.connect(_on_game_over)
 	SignalBus.game_win.connect(_on_game_win)
@@ -37,14 +39,17 @@ func _on_game_win():
 
 
 func reset():
+	$lose.stop()
 	$bgm.play(0.0)
-	$bgm_underwater.play(0.0)
+	$ambience.volume_db = ambience_original_volume
+	$ambience.play(0.0)
 	$bgm_underwater.volume_db = -80
+	$bgm_underwater.play(0.0)
 	$ambience_underwater.volume_db = -80
+	$ambience_underwater.play(0.0)
 	underwater_effect.cutoff_hz = 20500
-	
+	above_water = true
 
-var above_water = true
 func switch_ambience():
 	above_water = !above_water
 	

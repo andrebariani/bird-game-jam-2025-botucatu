@@ -221,6 +221,7 @@ script = ExtResource("5_875bn")
 MAX_SPEED = 700.0
 STEER_SPEED = 75.0
 FRICTION = 250
+STAMINA_COST = 500
 
 [node name="Swim" type="Node" parent="States"]
 script = ExtResource("6_pt8x3")

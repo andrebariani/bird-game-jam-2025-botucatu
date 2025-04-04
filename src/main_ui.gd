@@ -29,8 +29,10 @@ func _on_button_pressed() -> void:
 
 
 func _on_win_button_pressed():
+	AudioGlobal.reset()
 	get_tree().reload_current_scene()
 
 
 func _on_lose_button_pressed():
+	AudioGlobal.reset()
 	get_tree().reload_current_scene()
